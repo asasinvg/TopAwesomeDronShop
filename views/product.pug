@@ -1,0 +1,49 @@
+extends base.pug
+
+block content
+	section.pt-5.mb-5
+		.container
+			nav.mb-4(aria-label='breadcrumb')
+				ol.breadcrumb
+					li.breadcrumb-item
+						a(href='/') Главная
+					li.breadcrumb-item
+						a(href='#') Гоночные дроны
+					li.breadcrumb-item.active(aria-current='page') Ультродроны
+			.row
+				.col-md-7
+					img(src="https://media.discordapp.net/attachments/756099827649085482/836968959407947776/detail-3-gray.jpeg" style="max-width: 100%")
+				.col-md-5
+					h3.mb-3 Дрон в виде человека, самый лучший раб
+
+					.mb-4.justify-content-between
+						h4.text-success
+							| 6500₽ 
+							del.small.text-mutted.text-secondary 12999₽
+
+					p.text-secondary Самый лучший дрон для быстрой уборки, готовки и походов в магазин. Другие люди даже не замятят подмены, потому что мы использовали лучший на рынке имитатор голоса.
+
+					b
+						| Размер
+						small.text-secondary  (обязательное поле)
+					
+					.mb-2
+						select.form-select(aria-label='Default select example')
+							option(selected='') Выберете размер
+							option(value='1') 165 см
+							option(value='2') 170 см
+
+					b
+						| Акксессуары
+					.mb-4
+						.form-check
+							input#extreAccumulator.form-check-input(type='checkbox' value='extreAccumulator')
+							label.form-check-label(for='extreAccumulator')
+								| Дополнительные лопасти
+						.form-check
+								input#extraBlades.form-check-input(type='checkbox' value='extraBlades')
+								label.form-check-label(for='extraBlades')
+									| Аккумуляторы
+
+					button.btn.btn-success.w-100.mb-2(type="button") Добавить в корзину
+					button.btn.btn-link.w-100(type="button") Добавить в избранное 

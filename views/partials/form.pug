@@ -1,0 +1,15 @@
+section.mt-5(style="margin-bottom: 200px;")
+		container
+			h2.text-center.mb-4 Заказать обратный звонок 
+			.row.justify-content-center
+				form.col-md-5.center(action="/api/request-call" method="get")
+					.mb-3
+						label.form-label(for="name") Имя и фамилия
+						input.form-control(id="name" type="text" placeholder="Петя Петров" name="name" required)
+					.mb-3
+						label.form-label(for="email") Почта
+						input.form-control(id="email" type="email" placeholder="petrov-official@petya.com" name="email" required)
+					.mb-3
+						label.form-label(for="telephone") Телефон
+						input.form-control(id="phone" type="text" placeholder="+79996664423" name="phone" required)
+					button.btn.btn-success.btn-lg.w-100(type="submit") Отправить заявку
